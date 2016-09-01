@@ -1,0 +1,38 @@
+use time_series_diff.nc
+let toa_tr = swdntoatsky - ( lwuptoatsky + swuptoatsky )
+let toa_tr30 = toa_tr[l=21:50]
+let toa_cr = swdntoatsky - ( swuptoacsky + lwuptoacsky)
+let toa_cr30 = toa_cr[l=21:50]
+let toa_ts = swdntoatsky - swuptoatsky
+let toa_ts30 = toa_ts[l=21:50]
+let toa_cs = swdntoatsky - swuptoacsky
+let toa_cs30 = toa_cs[l=21:50]
+
+let sfc_tr = swdnsfctsky + lwdnsfctsky - ( lwupsfctsky + swupsfctsky )
+let sfc_tr30 = sfc_tr[l=21:50]
+let sfc_cr = swdnsfccsky + lwdnsfccsky - ( swupsfccsky + lwupsfccsky)
+let sfc_cr30 = sfc_cs[l=21:50]
+let sfc_ts = swdnsfctsky - swupsfctsky
+let sfc_ts30 = sfc_ts[l=21:50]
+let sfc_cs = swdnsfccsky - swupsfccsky
+let sfc_cs30 = sfc_cs[l=21:50]
+
+list toa_tr[i=@ave,j=@ave,l=@ave]
+list toa_tr30[i=@ave,j=@ave,l=@ave]
+list toa_cr[i=@ave,j=@ave,l=@ave]
+list toa_cr30[i=@ave,j=@ave,l=@ave]
+list toa_ts[i=@ave,j=@ave,l=@ave]
+list toa_ts30[i=@ave,j=@ave,l=@ave]
+list toa_cs[i=@ave,j=@ave,l=@ave]
+list toa_cs30[i=@ave,j=@ave,l=@ave]
+
+list sfc_tr[i=@ave,j=@ave,l=@ave]
+list sfc_tr30[i=@ave,j=@ave,l=@ave]
+list sfc_cr[i=@ave,j=@ave,l=@ave]
+list sfc_cr30[i=@ave,j=@ave,l=@ave]
+list sfc_ts[i=@ave,j=@ave,l=@ave]
+list sfc_ts30[i=@ave,j=@ave,l=@ave]
+list sfc_cs[i=@ave,j=@ave,l=@ave]
+list sfc_cs30[i=@ave,j=@ave,l=@ave]
+
+
