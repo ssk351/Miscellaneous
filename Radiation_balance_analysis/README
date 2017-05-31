@@ -1,0 +1,2 @@
+Running ferret script
+ferret -gif -script analysis.jnl atm_mon_2447_aero_minus_no_aero_tim_mean.nc

@@ -1,0 +1,13 @@
+use $1
+let toa = rsdt-rsut-rlut
+let sfc = rsds + rlds - rsus - rlus - hfss - hfls
+fill/levels=(-inf)(-15,15,3)(inf)/palette=blue_orange toa;go land
+frame/file=toa_diff.gif
+fill/levels=(-inf)(-25,25,5)(inf)/palette=blue_orange sfc;go land
+frame/file=sfc_diff.gif
+fill/levels=(-inf)(-1.5,1.5,0.3)(inf)/palette=blue_orange pr*86400;go land
+frame/file=pr_diff.gif
+fill/levels=(-inf)(-2.5,2.5,0.5)(inf)/palette=blue_orange ts; go land
+frame/file=ts_diff.gif
+fill/levels=(-inf)(-20,20,5)(inf)/palette=blue_orange sfc-toa;go land
+frame/file=atmosphere.gif
