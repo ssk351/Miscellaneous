@@ -11,3 +11,5 @@ fill/levels=(-inf)(-2.5,2.5,0.5)(inf)/palette=blue_orange ts; go land
 frame/file=ts_diff.gif
 fill/levels=(-inf)(-20,20,5)(inf)/palette=blue_orange sfc-toa;go land
 frame/file=atmosphere.gif
+! usage 
+! ferret -gif -script analysis.jnl filename.nc
