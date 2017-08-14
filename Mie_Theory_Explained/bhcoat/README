@@ -1,0 +1,23 @@
+C***********************************************************************
+C
+C Subroutine BHCOAT calculates Q_ext, Q_sca, Q_back for coated sphere.
+C All bessel functions computed by upward recurrence.
+C Input:
+C        X = 2*PI*RCORE*REFMED/WAVEL
+C        Y = 2*PI*RMANT*REFMED/WAVEL
+C        RFREL1 = REFCOR/REFMED
+C        RFREL2 = REFMAN/REFMED 
+C where  REFCOR = complex refr.index of core)
+C        REFMAN = complex refr.index of mantle)
+C        REFMED = real refr.index of medium)
+C        RCORE = radius of core
+C        RMANT = radius of mantle
+C        WAVEL = wavelength of light in ambient medium
+C
+C Routine BHCOAT is taken from Bohren & Huffman (1983)
+C Obtained from C.L.Joseph
+C
+C History:
+C 92/11/24 (BTD) Explicit declaration of all variables
+C***********************************************************************
+
