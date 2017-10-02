@@ -27,10 +27,10 @@ dataset = writeFile(129,135)
 print("loading data ...")
 nc_data = netCDF4.Dataset('MADA_pdsi_post.nc')
 # Coordinates
-time = nc_data.variables['time']
-lat = nc_data.variables['lat']
-lon = nc_data.variables['lon']
-pdsi = nc_data.variables['pdsi']
+time = nc_data.variables['time'][:]
+lat = nc_data.variables['lat'][:]
+lon = nc_data.variables['lon'][:]
+pdsi = nc_data.variables['pdsi'][:]
 
 
 # write data to file
@@ -44,10 +44,10 @@ lons = dataset.createVariable('lon', 'f4',('lon'))
 attrs = [time,lat,lon]
 attrs_n = [times,lats,lons]
 i = 0
-for var in attrs:
-	for j in var.ncattrs():
-		attrs_n[i].setncattr(j,var.getncattr(j))
-	i = i+1
+#for var in attrs:
+#	for j in var.ncattrs():
+#		attrs_n[i].setncattr(j,var.getncattr(j))
+#	i = i+1
 #t_pdsi = pdsi
 ndv=-999.0
 #t_pdsi[t_pdsi==ndv]=numpy.nan
