@@ -1,0 +1,22 @@
+use var_merged_1850_1854_tmean.nc 
+
+let cssflx=RLDSCS+RSDSCS-RLUSCS-RSUSCS
+let tssflx=RLDS+RSDS-RLUS-RSUS
+let cstflx=RSDT-RSUTCS-RLUTCS
+let tstflx=RSDT-RSUT-RLUT
+fill/palette=blue_darkred/levels=(-inf)(-200,200,20)(inf) cssflx[l=@ave];go land
+list cssflx[i=@ave,j=@ave]
+frame/file=cssflux.gif
+
+fill/palette=blue_darkred/levels=(-inf)(-200,200,10)(inf) tssflx[l=@ave];go land
+list tssflx[i=@ave,j=@ave]
+frame/file=tssflux.gif
+
+fill/palette=blue_darkred/levels=(-inf)(-150,150,10)(inf) cstflx[l=@ave];go land
+list cstflx[i=@ave,j=@ave]
+frame/file=cstflux.gif
+
+fill/palette=blue_darkred/levels=(-inf)(-150,150,10)(inf) tstflx[l=@ave];go land
+list tstflx[i=@ave,j=@ave]
+frame/file=tstflux.gif
+
