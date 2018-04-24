@@ -1,8 +1,8 @@
 #!/bin/bash
 
-for yyyy in {1850..1850}
+for yyyy in {1850..2005}
 do
-
+echo "Correcting time for year ${yyyy}"
 echo "netcdf time_anthrop_${yyyy} {" > time_${yyyy}.txt
 echo "dimensions:" >> time_${yyyy}.txt
 echo "	time = UNLIMITED ; // (12 currently)" >> time_${yyyy}.txt
@@ -20,7 +20,7 @@ echo "}" >>time_${yyyy}.txt
 
 done
 
-for yyyy in {1850..1850}
+for yyyy in {1850..2005}
 do
 
 ncgen -o time_${yyyy}.nc time_${yyyy}.txt 
